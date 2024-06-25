@@ -1,0 +1,27 @@
+
+general:
+  seed: 1999
+  val_split: 4
+  modalities: DNAm
+  n_outs: 20
+  dropout: 0.2
+  epochs: 50
+  save_path: ./models/
+  dim: 128
+  n_folds: 5
+
+dataloader:
+  batch_size: 24
+  pin_memory: true
+  num_workers: 40
+  persistent_workers: true
+
+optimizer:
+  name: AdamW
+  params:
+    lr: 1e-3
+    weight_decay: 1e-2
+
+scheduler:
+  T_max: ${general.epochs}
+  eta_min: 5e-6

@@ -1,0 +1,14 @@
+numpy==1.24.3
+matplotlib
+imutils
+torch==1.13.1
+torchvision==0.14.1
+monai==1.1.0
+tqdm
+pyvips==2.2.1
+opencv-python==4.7.0.72
+pandas==2.0.1
+hydra-core==1.3.2
+einops==0.6.1
+pycox==0.2.3
+loguru

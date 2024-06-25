@@ -1,0 +1,6 @@
+method: tensor
+general:
+  dim: 128
+  n_outs: 20
+  dropout: 0.
+  seed: 1999

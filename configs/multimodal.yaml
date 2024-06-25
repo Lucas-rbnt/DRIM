@@ -1,0 +1,45 @@
+
+general:
+  seed: 1999
+  val_split: 4
+  modalities: [DNAm, WSI, RNA, MRI]
+  n_outs: 20
+  dropout: 0.2
+  epochs: 30
+  epochs_finetune: 10
+  dim: 128
+  save_path: ./models/
+  n_folds: 5
+
+dataloader:
+  batch_size: 24
+  pin_memory: true
+  num_workers: 40
+  persistent_workers: true
+
+fusion:
+  name: maf
+  params:
+    depth: 1
+    heads: 16
+    dim_head: 64
+    mlp_dim: 128
+
+optimizer:
+  name: AdamW
+  params:
+    lr: 1e-3
+    weight_decay: 1e-2
+
+scheduler:
+  T_max: ${general.epochs}
+  eta_min: 5e-6
+
+aux_loss:
+  name: contrastive
+  alpha: 1.
+
+disentangled:
+  gamma: 0.8
+  dsm_lr: 1e-3
+  dsm_wd: 3e-4
