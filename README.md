@@ -1,6 +1,8 @@
 # DRIM: Learning Disentangled Representations from Incomplete Multimodal Healthcare Data
 
+**[Go to pdf](https://papers.miccai.org/miccai-2024/paper/1276_paper.pdf)** <br>
 This is the code associated to the paper **DRIM: Learning Disentangled Representations from Incomplete Multimodal Healthcare Data** (accepted to [MICCAI2024](https://conferences.miccai.org/2024/en/)).
+<br>
 ![DRIM](static/DRIM.png)
 __________________
 # Data Preprocessing
