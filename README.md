@@ -106,3 +106,14 @@ wandb:
     project: MyAwesomeProject
 ````
 Otherwise, training progression and evaluation will be displayed directly in the console.
+
+________
+# Citation
+```
+@misc{robinet_drim_2024,
+      title={DRIM: Learning Disentangled Representations from Incomplete Multimodal Healthcare Data}, 
+      author={Lucas Robinet and Ahmad Berjaoui and Ziad Kheil and Elizabeth Cohen-Jonathan Moyal},
+      year={2024},
+      primaryClass={cs.AI},
+}
+```
