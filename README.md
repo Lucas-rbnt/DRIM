@@ -55,12 +55,7 @@ $ python train_vanilla_multimodal.py -m fusion.name=mean,concat,masked_mean,tens
 
 **Auxiliary Multimodal**
 <br>
-In this repository, in addition to the fusion, you can add a cost function to the $s_i^m$ representations. This can be either the cost function used in DRIM directly adapted from the Supervised Contrastive loss function (1) or the MMO loss function (2) which tends to orthogonalise the representations.
-$$
-\mathcal{L}_{sh} = \frac{1}{N\cdot M} \sum_{j \in J} \frac{-1}{M - 1} \sum_{b \in B(j)} \log \frac{exp(s_j\cdot s_b /\tau)}{\sum_{\substack{k \in J \\ k\neq j}} exp (s_j\cdot s_k / \tau)} \; \; \; (1)
-$$
-or 
-$$\mathcal{L}_{sh} = \frac{1}{N\cdot M} \sum_{m = 1}^M \max(1, \|s^m\|_*) - \|S\|_* \; \; \; (2)$$
+In this repository, in addition to the fusion, you can add a cost function to the $s_i^m$ representations. This can be either the cost function used in DRIM directly adapted from the Supervised Contrastive loss function (1) or the MMO loss function (2) which tends to orthogonalise the representations. 
 (see the paper for more details on the notations.)
 ```
 $ python train_aux_multimodal.py aux_loss.name=contrastive
@@ -74,7 +69,7 @@ The DRIM method is very flexible and can be adapted to any type of task. For exa
 <br>
 **DRIMSurv**
 <br>
-DRIMSurv enables end-to-end training of a survival model by training the encoders at the same time as the higher attention blocks needed to merge the various representations $\{s^m\}_{m=1}^M$ and $\{u^m\}_{m=1}^M$. (Fig 1c.)
+DRIMSurv enables end-to-end training of a survival model by training the encoders at the same time as the higher attention blocks needed to merge the various representations. (Fig 1c.)
 ```
 $ python train_drimsurv.py
 ```
