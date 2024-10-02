@@ -105,10 +105,11 @@ Otherwise, training progression and evaluation will be displayed directly in the
 ________
 # Citation
 ```
-@misc{robinet_drim_2024,
-      title={DRIM: Learning Disentangled Representations from Incomplete Multimodal Healthcare Data}, 
-      author={Lucas Robinet and Ahmad Berjaoui and Ziad Kheil and Elizabeth Cohen-Jonathan Moyal},
-      year={2024},
-      primaryClass={cs.AI},
+@InProceedings{robinet_drim_2024,
+        author = { Robinet, Lucas and Berjaoui, Ahmad and Kheil, Ziad and Cohen-Jonathan Moyal, Elizabeth},
+        title = { { DRIM: Learning Disentangled Representations from Incomplete Multimodal Healthcare Data } },
+        booktitle = {proceedings of Medical Image Computing and Computer Assisted Intervention -- MICCAI 2024},
+        year = {2024},
+        publisher = {Springer Nature Switzerland},
 }
 ```
