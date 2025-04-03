@@ -84,7 +84,7 @@ def main(cfg: DictConfig) -> None:
             if cfg.method == "drim":
                 encoders_u = {}
 
-            for modality in ["DNAm", "WSI", "RNA", "MRI"]:
+            for modality in combination:
                 datasets = get_datasets(dataframes, modality, fold, return_mask=True)
                 test_datasets[modality] = datasets["test"]
                 encoder = get_encoder(modality, cfg).cuda()
